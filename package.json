@@ -1,0 +1,8 @@
+{
+  "name": "webpack-v4-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/marioterron/webpack-v4-demo.git",
+  "author": "Mario Terron <marioterron157@gmail.com>",
+  "license": "MIT"
+}
