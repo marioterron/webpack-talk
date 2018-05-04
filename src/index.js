@@ -1,14 +1,9 @@
-import React from 'react';
-import { render } from 'react-dom';
+import createCard from './components/card';
 
-import Clock from './components/Clock';
-
-const App = () => {
-  return (
-    <div>
-      <Clock />
-    </div>
-  );
+const me = {
+  name: 'Cristina Cifuentes',
+  position: 'Distribuidora de Productos Cosmeticos',
+  img: 'https://pbs.twimg.com/profile_images/923795770796597248/sv31TneB.jpg',
 };
 
-render(<App />, document.getElementById('root'));
+createCard(me);

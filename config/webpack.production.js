@@ -9,19 +9,19 @@ module.exports = {
     rules: [
       {
         test: /\.(css|scss)$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-      },
-    ],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+      }
+    ]
   },
   plugins: [
-    new CleanWebpackPlugin([commonPaths.build], { root: commonPaths.root }),
+    new CleanWebpackPlugin([commonPaths.build]),
     new CopyWebpackPlugin([
       {
         from: `${commonPaths.public}/favicon.png`,
         to: `${commonPaths.build}/favicon.png`,
-        toType: 'file',
-      },
+        toType: 'file'
+      }
     ]),
-    new MiniCssExtractPlugin('style.[hash].css'),
-  ],
+    new MiniCssExtractPlugin('style.[hash].css')
+  ]
 };
