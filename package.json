@@ -1,11 +1,11 @@
 {
-  "name": "webpack-v4-demo",
+  "name": "react-starter-config",
   "version": "1.0.0",
   "main": "index.js",
-  "description": "Testing the new features of webpack 4",
+  "description": "A simple webpack config for React projects",
   "license": "MIT",
   "author": "Mario Terron <marioterron157@gmail.com>",
-  "repository": "https://github.com/marioterron/webpack-v4-demo.git",
+  "repository": "https://github.com/marioterron/webpack-talk.git",
   "scripts": {
     "build": "webpack --env.mode production",
     "watch": "webpack-dev-server --env.mode development --inline --progress"
