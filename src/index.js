@@ -1,9 +1,14 @@
-import createCard from './card';
+import React from 'react';
+import { render } from 'react-dom';
 
-const me = {
-	name: 'Mario Terron',
-	position: 'Fronted Developer',
-	img: 'https://avatars1.githubusercontent.com/u/2824475?v=4',
+import Clock from './components/Clock';
+
+const App = () => {
+  return (
+    <div>
+      <Clock />
+    </div>
+  );
 };
 
-createCard(me);
+render(<App />, document.getElementById('root'));

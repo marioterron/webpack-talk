@@ -1,24 +1,7 @@
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpackMerge = require('webpack-merge');
+const commonConfig = require('./config/webpack.common');
 
-module.exports = {
-  output: {
-    path: path.join(__dirname, 'build'),
-    filename: 'bundle.js',
-  },
-  plugins: [new webpack.ProgressPlugin(), new HtmlWebpackPlugin()],
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: 'babel-loader',
-      },
-      {
-        test: /\.css/,
-        use: ['style-loader', 'css-loader'],
-      },
-    ],
-  },
+module.exports = env => {
+  const envConfig = require(`./config/webpack.${env.mode}`);
+  return webpackMerge({ mode: env.mode }, commonConfig, envConfig);
 };
