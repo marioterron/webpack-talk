@@ -1,11 +1,11 @@
 {
-  "name": "webpack-v4-demo",
+  "name": "0cjs-demo",
   "version": "1.0.0",
   "main": "index.js",
-  "description": "Testing the new features of webpack 4",
+  "description": "A simple example of webpack #0CJS",
   "license": "MIT",
   "author": "Mario Terron <marioterron157@gmail.com>",
-  "repository": "https://github.com/marioterron/webpack-v4-demo.git",
+  "repository": "https://github.com/marioterron/webpack-talk.git",
   "scripts": {
     "dev": "rm -rf dist && webpack --mode development",
     "prod": "rm -rf dist && webpack --mode production"
