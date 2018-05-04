@@ -1,3 +1,23 @@
-# webpack-v4-demo
+# Webpack: A newcomer introduction - Talk
 
-Testing the new features of webpack 4
+Learning resources for the JS Coders Webpack talk
+
+## Project Setup
+
+This project assumes you have [NodeJS](http://nodejs.org/) installed. You should
+also have [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) installed.
+
+There are a different branches for each example. To get started with the project, start with this:
+
+1.  Clone or download this repo.
+2.  Install dependencies: `yarn` or `npm i`
+3.  Happy coding!
+
+## Contact
+
+* Email: mario.terron@beezy.net
+* Twitter: [@marioterron\_](https://twitter.com/marioterron_)
+
+## Resources
+
+* [Slides]()
