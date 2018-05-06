@@ -3,25 +3,29 @@ const commonPaths = require('./common-paths');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
   module: {
     rules: [
       {
         test: /\.(css|scss)$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-      },
-    ],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+      }
+    ]
+  },
+  optimization: {
+    minimizer: [new OptimizeCssAssetsWebpackPlugin()]
   },
   plugins: [
     new CleanWebpackPlugin([commonPaths.build], { root: commonPaths.root }),
     new CopyWebpackPlugin([
       {
-        from: `${commonPaths.public}/favicon.png`,
-        to: `${commonPaths.build}/favicon.png`,
-        toType: 'file',
-      },
+        from: `${commonPaths.public}/favicon.ico`,
+        to: `${commonPaths.build}/favicon.ico`,
+        toType: 'file'
+      }
     ]),
-    new MiniCssExtractPlugin('style.[hash].css'),
-  ],
+    new MiniCssExtractPlugin({ filename: 'style.[hash].css' })
+  ]
 };

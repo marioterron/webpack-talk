@@ -1,17 +1,15 @@
-const commonPaths = require('./common-paths');
-
 module.exports = {
+  devtool: 'eval-source-map',
   devServer: {
     port: 3000,
-    historyApiFallback: true,
-    contentBase: commonPaths.src,
+    historyApiFallback: true
   },
   module: {
     rules: [
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-      },
-    ],
-  },
+        use: ['style-loader', 'css-loader', 'sass-loader']
+      }
+    ]
+  }
 };
