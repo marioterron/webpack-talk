@@ -1,5 +1,3 @@
-import './card.css';
-
 module.exports = ({ img, name, position }) => {
   const cardElement = document.createElement('div');
   const cardImg = `<img class="card-image" src="${img}"></img>`;
