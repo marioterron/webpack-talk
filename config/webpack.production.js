@@ -1,5 +1,6 @@
 const commonPaths = require('./common-paths');
 
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -15,7 +16,14 @@ module.exports = {
     ]
   },
   optimization: {
-    minimizer: [new OptimizeCssAssetsWebpackPlugin()]
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: true
+      }),
+      new OptimizeCssAssetsWebpackPlugin()
+    ]
   },
   plugins: [
     new CleanWebpackPlugin([commonPaths.build], { root: commonPaths.root }),
