@@ -34,6 +34,6 @@ module.exports = {
         toType: 'file'
       }
     ]),
-    new MiniCssExtractPlugin({ filename: 'style.[hash].css' })
+    new MiniCssExtractPlugin({ filename: 'styles.[chunkhash].css' })
   ]
 };
